@@ -1,0 +1,14 @@
+mas sprint_planning {
+  agent developer : dev.asl
+
+  agent sample_agent : sample_agent.asl {
+    join: csws
+    goals: hello
+  }
+
+  workspace csws {
+    artifact coalition : coalition.CoalitionFormation("", "coalition.algorithms.clink.adapterClink")
+  }
+
+  asl-path: src/agt
+}
