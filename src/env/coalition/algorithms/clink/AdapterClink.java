@@ -10,6 +10,7 @@ public class AdapterClink implements ICoalitionFormationSolver {
       Set<CoalitionAgent> agents,
       Set<ConstraintBasic> positive,
       Set<ConstraintBasic> negative,
+      Set<ConstraintSize> constraintSizeSet,
       Set<Task> tasks,
       Set<Rule> rules) {
         return null;

@@ -62,7 +62,7 @@ public class CoalitionFormation extends Artifact {
       e.printStackTrace();
     }
 
-    agentIds = HashBitMap.create();
+    agentIds = HashBiMap.create();
 
     logger.info("coalition formation created");
   }
@@ -95,7 +95,9 @@ public class CoalitionFormation extends Artifact {
     if (!owners.contains(owner)) owners.add(owner);
   }
 
-  private void setupAlgorithm(String algorithm) {
+  private void setupAlgorithm(String algorithm) throws InstantiationException, 
+    IllegalAccessException, IllegalArgumentException, InvocationTargetException,
+    NoSuchMethodException, SecurityException, ClassNotFoundException {
     Class<?> algoClass = Class.forName(algorithm);
     Constructor<?> algoConstruct = algoClass.getConstructor();
 

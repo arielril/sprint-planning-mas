@@ -88,4 +88,12 @@ public class MyFunction extends CharacteristicFunction {
 
     return -1 * numberOfPunishment;
   }
+
+  public void clear() {}
+
+  public void generateValues(int numOfAgents) {}
+
+  public void removeAdditionalInformation(Object info) {}
+
+  public void putAdditionalInformation(Object... infos) {}
 }
