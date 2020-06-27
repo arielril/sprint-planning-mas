@@ -1,5 +1,8 @@
 mas sprint_planning {
-  agent developer : dev.asl
+  agent developer : dev.asl {
+    join: csws
+    goals: hello
+  }
 
   agent sample_agent : sample_agent.asl {
     join: csws

@@ -1,5 +1,9 @@
-apply plugin: 'java'
-apply plugin: 'eclipse'
+// coppied and modified file from Coalition4Mas
+
+plugins {
+  id 'java'
+  id 'eclipse'
+}
 
 repositories {
 	jcenter()
@@ -13,13 +17,11 @@ repositories {
 dependencies {
 	implementation group: 'org.jacamo', 
 	   name: 'jacamo', 
-	   version: '0.7'
+	   version: '0.8'
 	   
-  implementation group: 'com.google.guava', 
-     name: 'guava', 
-     version: '22.0'
+  implementation 'com.google.guava:guava:29.0-jre'
 
-	testCompile 'junit:junit:4.12'
+	testImplementation 'junit:junit:4.13'
 }
 
 task run (type: JavaExec, dependsOn: ['classes', 'test']) {
