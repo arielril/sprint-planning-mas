@@ -1,7 +1,5 @@
 package coalition.structures;
 
-import coalition.structures.Coalition;
-
 import java.util.Comparator;
 import java.util.ArrayList;
 import java.util.List;

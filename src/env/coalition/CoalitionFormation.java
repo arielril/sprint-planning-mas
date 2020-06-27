@@ -22,13 +22,8 @@ public class CoalitionFormation extends Artifact {
   private final String runningAlgo = "running algorithm";
   private final String waitingInput = "waitingForInputs";
 
-  private boolean produceOnlyOneCoalition;
-
-  private int agentsNumber, pConstraintNumber, nConstraintsNumber, mcRulesNumber = 0;
   private List<String> owners = new ArrayList<String>();
 
-  private CoalitionStructure coalitionStruct;
-  private Set<String> agentTypes = new HashSet<String>();
   private Set<ConstraintBasic> positiveConstraintsSet = new HashSet<ConstraintBasic>();
   private Set<ConstraintBasic> negativeConstraintsSet = new HashSet<ConstraintBasic>();
   private Set<ConstraintSize> constraintSizeSet = new HashSet<ConstraintSize>();
@@ -51,8 +46,6 @@ public class CoalitionFormation extends Artifact {
   private void setup(String owner, String algorithm, boolean onlyOneCoalition) {
     logger.info("creating coalition formation");
 
-    this.produceOnlyOneCoalition = onlyOneCoalition;
-
     addOwner(owner);
 
     try {
@@ -73,7 +66,7 @@ public class CoalitionFormation extends Artifact {
     defineObsProperty(runningAlgo);
     
     try {
-      CoalitionStructure cs = solver.solveCoalitionStructureGeneration(
+      solver.solveCoalitionStructureGeneration(
         agentIds.values(),
         positiveConstraintsSet, 
         negativeConstraintsSet,
@@ -99,7 +92,7 @@ public class CoalitionFormation extends Artifact {
     IllegalAccessException, IllegalArgumentException, InvocationTargetException,
     NoSuchMethodException, SecurityException, ClassNotFoundException {
     Class<?> algoClass = Class.forName(algorithm);
-    Constructor<?> algoConstruct = algoClass.getConstructor();
+    // Constructor<?> algConstructor = algoClass.getConstructor();
 
     this.solver = new AdapterClink();
     this.solver.setup();
