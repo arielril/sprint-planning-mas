@@ -1,0 +1,12 @@
+{
+  "cSpell.words": [
+    "argmax"
+  ],
+  "java.dependency.syncWithFolderExplorer": true,
+  "files.exclude": {
+    "**/.classpath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.factorypath": true
+  }
+}
