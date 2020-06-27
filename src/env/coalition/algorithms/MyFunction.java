@@ -20,9 +20,17 @@ public class MyFunction extends CharacteristicFunction {
     Set<Rule> rules,
     Set<ConstraintSize> constraintSize
   ) {
-    this.numberOfAgents = numberOfAgents;
+    this.setNumberOfAgents(numberOfAgents);
     this.rules = rules;
     this.constraintsSize = constraintSize;
+  }
+
+  public double getNumberOfAgents() {
+    return numberOfAgents;
+  }
+
+  public void setNumberOfAgents(double numberOfAgents) {
+    this.numberOfAgents = numberOfAgents;
   }
 
   @Override
