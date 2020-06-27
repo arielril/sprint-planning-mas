@@ -7,7 +7,7 @@ mas sprint_planning {
   }
 
   workspace csws {
-    artifact coalition : coalition.CoalitionFormation("", "coalition.algorithms.clink.adapterClink")
+    artifact coalition : coalition.CoalitionFormation("", "coalition.algorithms.clink.AdapterClink")
   }
 
   asl-path: src/agt
