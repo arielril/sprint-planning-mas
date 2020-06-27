@@ -3,8 +3,6 @@ package coalition.structures;
 import java.nio.charset.StandardCharsets;
 import java.util.*;
 
-import coalition.structures.CoalitionAgent;
-
 import com.google.common.hash.Hashing;
 
 public class Coalition {
@@ -21,6 +19,8 @@ public class Coalition {
   public Coalition(String name) {
     init(name);
   }
+
+  public String getId() { return this.id; }
 
   private void init(String name) {
     this.agents = new HashSet<CoalitionAgent>();
