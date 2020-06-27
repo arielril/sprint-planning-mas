@@ -4,10 +4,10 @@
 
 /* Initial goals */
 
-!start.
+!hello.
 
 /* Plans */
 
-+!start : true <- .print("hello world from the sample one.").
++!hello : true <- .print("hello world from the sample one.").
 
 { include("$jacamoJar/templates/common-cartago.asl") }

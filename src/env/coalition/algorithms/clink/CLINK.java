@@ -13,6 +13,7 @@ import com.google.common.graph.EndpointPair;
 import com.google.common.graph.Graphs;
 import com.google.common.graph.MutableGraph;
 import com.google.common.primitives.Doubles;
+
 import coalition.characteristicFunction.CharacteristicFunction;
 import coalition.structures.Coalition;
 import coalition.structures.CoalitionAgent;
@@ -58,8 +59,8 @@ public class CLINK {
 
       while (pl.max() >= 0 && cs0.size() > 1) {
         // update the partition
-        Object idI = pl.argmax().idI;
-        Object idJ = pl.argmax().idJ;
+        Object idI = pl.argmax().getI();
+        Object idJ = pl.argmax().getJ();
 
         Set newCoalition = Sets.union(
           coalitionSet.get(idI),

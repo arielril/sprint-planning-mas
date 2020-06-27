@@ -14,8 +14,8 @@ import coalition.structures.*;
 import coalition.algorithms.clink.*;
 
 public class CoalitionFormation extends Artifact {
-  private final static String DEFAULT_TYPE = "NA";
-  private final static String FAKE_TYPE = "fake";
+  // private final static String DEFAULT_TYPE = "NA";
+  // private final static String FAKE_TYPE = "fake";
 
   private final Logger logger = Logger.getLogger(CoalitionFormation.class.getName());
 
@@ -91,7 +91,7 @@ public class CoalitionFormation extends Artifact {
   private void setupAlgorithm(String algorithm) throws InstantiationException, 
     IllegalAccessException, IllegalArgumentException, InvocationTargetException,
     NoSuchMethodException, SecurityException, ClassNotFoundException {
-    Class<?> algoClass = Class.forName(algorithm);
+    // Class<?> algoClass = Class.forName(algorithm);
     // Constructor<?> algConstructor = algoClass.getConstructor();
 
     this.solver = new AdapterClink();
